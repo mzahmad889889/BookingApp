@@ -14,17 +14,13 @@ const app = express();
 app.use(express.json())
 
 app.use(cors({
-    origin: 'https://booking-app-frontend-topaz.vercel.app/',
-    methods: ['GET','POST','PUT','DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
+    origin: 'https://booking-app-frontend-topaz.vercel.app/', // Your frontend URL
+    methods: ['GET','POST','PUT','DELETE','OPTIONS'], // Allowed methods
+    credentials: true, // Allow cookies (if needed)
 }));
 
-app.use(function (request, response, next) {
-  response.header("Access-Control-Allow-Origin", "*");
-  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// Handle preflight requests (OPTIONS)
+app.options('*', cors());
 
 app.post('/booking', async (req, res) => {
     const { name, email, date, timeSlot } = req.body;
