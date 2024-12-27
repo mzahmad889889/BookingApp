@@ -33,7 +33,7 @@ function BookingForm() {
       onSubmit: async(values, actions) => {
         console.log(values)
         try{
-         const response = await axios.post('http://localhost:17766/booking', {...values,
+         const response = await axios.post('https://booking-app-mern.vercel.app/booking', {...values,
             timeSlot: selectedTime})
          console.log(response.data)
         //  console.log(response.data.message || "Successfully Registered")
