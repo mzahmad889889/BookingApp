@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json())
 
 app.use(cors({
-    origin: 'https://booking-app-frontend-topaz.vercel.app',
+    origin: 'https://booking-app-mern.vercel.app/',
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
