@@ -5,7 +5,7 @@ import ProductList from "./components/ProductList"
 import Checkout from "./components/Checkout"
 
 function App() {
-
+axios.defaults.withCredentials = true
   return (
     <>
       <BrowserRouter>
