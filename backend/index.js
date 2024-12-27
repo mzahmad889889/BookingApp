@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json())
 app.use(cors(
     {
-    origin: ["https://booking-app-frontend-kappa.vercel.app/"],
+    origin: ["https://booking-app-frontend-topaz.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
     }
