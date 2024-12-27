@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json())
 app.use(cors(
     {
-    origin: ["https://booking-app-mern.vercel.app/"],
+    origin: [""],
     methods: ["POST", "GET"],
     credentials: true
     }
