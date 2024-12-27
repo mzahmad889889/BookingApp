@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json())
 app.use(cors(
     {
-    origin: [""],
+    origin: ["https://booking-app-frontend-kappa.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
     }
