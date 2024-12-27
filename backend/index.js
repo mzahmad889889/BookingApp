@@ -12,7 +12,13 @@ const backupFrequency = "0 0 * * *";
 const app = express();
 
 app.use(express.json())
-app.use(cors());
+app.use(cors(
+    {
+    origin: ["https://booking-app-mern.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+    }
+));
 
 
 app.post('/booking', async (req, res) => {
