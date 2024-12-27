@@ -35,8 +35,7 @@ function BookingForm() {
         try{
          const response = await axios.post('https://booking-app-mern.vercel.app/booking', {...values,
             timeSlot: selectedTime,
-            method: 'GET',
-            credentials: 'include', // Include cookies if needed
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
