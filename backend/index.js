@@ -15,7 +15,7 @@ app.use(express.json())
 
 app.use(cors(
     {
-    origin: ["https://booking-app-frontend-topaz.vercel.app"],
+    origin: ["https://booking-app-frontend-topaz.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
     }
