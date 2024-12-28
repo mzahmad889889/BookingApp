@@ -7,7 +7,7 @@ function Navbar() {
             <Link to="/">
                 <button className="text-black bg-white py-2 px-4 rounded">Products</button>
             </Link>
-            <Link to="booking" >
+            <Link to="/booking" >
                 <button className='bg-blue-500 text-white py-2 rounded px-4'>Booking</button>
             </Link>
         </nav>
