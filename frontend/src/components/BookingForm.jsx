@@ -34,7 +34,7 @@ function BookingForm() {
         console.log(values)
         try{
             const response = await axios.post(
-              'https://booking-app-mern.vercel.app/booking',
+              'https://booking-app-mern.vercel.app',
               {
                 ...values,
                 timeSlot: selectedTime,
