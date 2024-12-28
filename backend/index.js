@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 app.options('*', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://booking-app-frontend-rose-six.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', 'https://booking-app-frontend-rose-six.vercel.app/booking');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
     res.sendStatus(204);
