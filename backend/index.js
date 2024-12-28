@@ -13,10 +13,6 @@ const app = express();
 
 app.use(express.json())
 
-app.options('*', (req, res) => {
-    res.sendStatus(200); // Explicitly handle OPTIONS requests
-});
-
 app.use(cors({
     origin: 'https://booking-app-frontend-topaz.vercel.app', // Remove trailing slash
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
