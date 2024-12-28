@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json())
 
 app.use(cors({
-    origin: 'https://booking-app-frontend-kappa.vercel.app/', // Remove trailing slash
+    origin: 'https://booking-app-frontend-kappa.vercel.app', // Remove trailing slash
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Ensure headers are explicitly allowed
     credentials: true, // Allow cookies (if needed)
