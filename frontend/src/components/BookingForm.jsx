@@ -33,15 +33,20 @@ function BookingForm() {
       onSubmit: async(values, actions) => {
         console.log(values)
         try{
-         const response = await axios.post('https://booking-app-mern.vercel.app/booking', {...values,
-            timeSlot: selectedTime,
-            },
-            {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-         })
+            const response = await axios.post(
+              'https://booking-app-mern.vercel.app/booking',
+              {
+                ...values,
+                timeSlot: selectedTime,
+              },
+              {
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                withCredentials: true, // Include credentials (cookies) if needed
+              }
+            );
+
          console.log(response.data)
         //  console.log(response.data.message || "Successfully Registered")
          actions.resetForm()
