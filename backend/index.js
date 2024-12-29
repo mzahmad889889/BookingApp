@@ -14,14 +14,14 @@ const app = express();
 app.use(express.json())
 
 app.use(cors({
-    origin: 'https://booking-app-frontend-rose-six.vercel.app', // Remove trailing slash
+    origin: 'https://booking-app-frontend-rose-six.vercel.app/', // Remove trailing slash
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Ensure headers are explicitly allowed
     credentials: true, // Allow cookies (if needed)
 }));
 
 app.options('*', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://booking-app-frontend-rose-six.vercel.app/booking');
+    res.setHeader('Access-Control-Allow-Origin', 'https://booking-app-frontend-rose-six.vercel.app/');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
     res.sendStatus(204);
