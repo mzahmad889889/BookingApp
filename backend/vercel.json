@@ -1,7 +1,6 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "https://booking-app-frontend-rose-six.vercel.app" },
         { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE, OPTIONS" },
