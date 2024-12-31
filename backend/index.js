@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 
-app.post('/', async (req, res) => {
+app.post('/booking', async (req, res) => {
     const { name, email, date, timeSlot } = req.body;
 
     try {
